@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Meta-Tags für Zeichencodierung und responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titel der Webseite -->
+    <title>Pizza-Service - Bestellen Sie Ihre Lieblingspizza</title>
+
+    <!-- Verlinkung zum externen Stylesheet für die Warenkorb-Darstellung -->
+    <link rel="stylesheet" href="warenkorbstyle.css">
+</head>
+<body>
+
+    <!-- Header mit der Hauptüberschrift und der Navigation -->
+    <header>
+        <h1>Pizza-Service</h1> <!-- Hauptüberschrift der Seite -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Speisekarte</a></li> <!-- Link zur Speisekarte -->
+                <li><a href="#orders">Bestellungen</a></li> <!-- Link zu den Bestellungen -->
+                <li><a href="#about">Über uns</a></li> <!-- Link zu Informationen über das Unternehmen -->
+                <li><a href="#contact">Kontakt</a></li> <!-- Link zu den Kontaktdaten -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Abschnitt für den Warenkorb -->
+        <section id="cart" class="cart-container">
+            <h2>Warenkorb</h2> <!-- Überschrift für den Warenkorb -->
+            
+            <!-- Liste der Artikel im Warenkorb -->
+            <ul id="cart-items"></ul> 
+            
+            <!-- Anzeige des Gesamtbetrags des Warenkorbs -->
+            <p>Gesamt: <span id="cart-total">0.00</span> €</p>
+            
+            <!-- Button, um den Warenkorb anzuzeigen (öffnet eine neue Seite) -->
+            <button id="cart-button" class="order-button" onclick="window.open('/cart', '_blank')">Warenkorb anzeigen</button>
+        </section>
+
+        <!-- Abschnitt für die Speisekarte -->
+        <section id="menu">
+            <h2>Unsere Speisen</h2> <!-- Überschrift für die Speisekarte -->
+
+            <!-- Menüelement für Margherita Pizza -->
+            <div class="menu-item">
+                <img src="images/margherita.jpg" alt="Margherita Pizza" class="pizza-image">
+                <div class="menu-item-content">
+                    <h3>Margherita</h3>
+                    <p>Tomatensauce, Mozzarella, frischer Basilikum</p> <!-- Beschreibung der Pizza -->
+                    <span class="price">8,00 €</span> <!-- Preis der Pizza -->
+                    <button class="order-button" data-item="Margherita" data-price="8.00">Bestellen</button> <!-- Bestell-Button mit Preis -->
+                </div>
+            </div>
+            <!-- Menüelement für Pepperoni Pizza -->
+            <div class="menu-item">
+                <img src="images/pepperoni.jpg" alt="Pepperoni Pizza" class="pizza-image">
+                <div class="menu-item-content">
+                    <h3>Pepperoni</h3>
+                    <p>Tomatensauce, Mozzarella, Pepperoni</p> <!-- Beschreibung der Pizza -->
+                    <span class="price">9,00 €</span> <!-- Preis der Pizza -->
+                    <button class="order-button" data-item="Pepperoni" data-price="9.00">Bestellen</button> <!-- Bestell-Button mit Preis -->
+                </div>
+            </div>
+            <!-- Menüelement für Vegetarische Pizza Mexican-Style -->
+            <div class="menu-item">
+				<img src="images/veg_pizza_mexican.jpg" alt="Vegetarische Pizza Mexican-Style" class="pizza-image">
+                <div class="menu-item-content">
+                    <h3>Vegetarische Pizza Mexican-Style</h3>
+                    <p>Tomatensauce, Mozzarella, Jalapeños, <br> Paprika, Zwiebeln, Mais, frischer Koriander</p> <!-- Beschreibung der Pizza -->
+                    <span class="price">8,50 €</span> <!-- Preis der Pizza -->
+                    <button class="order-button" data-item="Vegetarische Pizza Mexican-Style" data-price="8.50">Bestellen</button> <!-- Bestell-Button mit Preis -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Abschnitt für die letzten Bestellungen -->
+        <section id="orders">
+            <h2>Letzte Bestellungen</h2> <!-- Überschrift für die Bestellungen -->
+            <ul id="order-history"></ul> <!-- Liste der letzten Bestellungen -->
+        </section>
+
+        <!-- Abschnitt über das Unternehmen -->
+        <section id="about">
+            <h2>Über uns</h2> <!-- Überschrift für Informationen über das Unternehmen -->
+            <p>Wir sind Ihr zuverlässiger Pizza-Lieferservice mit frischen Zutaten und schneller Lieferung.</p> <!-- Beschreibung des Unternehmens -->
+        </section>
+
+        <!-- Abschnitt für die Kontaktdaten -->
+        <section id="contact">
+            <h2>Kontakt</h2> <!-- Überschrift für Kontaktinformationen -->
+            <p>Haben Sie Fragen? Kontaktieren Sie uns unter <a href="mailto:info@pizza-service.de">info@pizza-service.de</a>.</p> <!-- Kontakt-E-Mail -->
+        </section>
+    </main>
+
+    <!-- Footer mit Copyright-Hinweis -->
+    <footer>
+        <p>&copy; 2024 Pizza-Service. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- Script-Tag für Socket.IO (wird vermutlich für Echtzeit-Interaktionen benötigt) -->
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    
+    <!-- Script-Tag für benutzerdefiniertes JavaScript (wird die Funktionalität für Warenkorb und Bestellungen steuern) -->
+    <script src="script2.js"></script>
+</body>
+</html>
+
+
+
+

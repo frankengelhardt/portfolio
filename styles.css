@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Unterstreichen der Links beim Hover */
+    color: #ffcc00; /* Farbe beim Hover ändern */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    width: 150px; /* Breite des Bildes */
+    height: auto; /* Höhe automatisch anpassen */
+    border-radius: 50%; /* Abgerundete Ecken (Kreis) */
+    margin: 20px 0; /* Abstand über und unter dem Bild */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+}
+
+/* Media Queries für responsives Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Elemente untereinander anordnen */
+        margin: 10px 0; /* Abstand zwischen den Links */
+    }
+
+    header {
+        padding: 15px 0; /* Weniger Padding auf kleineren Bildschirmen */
+    }
+
+    main {
+        padding: 10px; /* Weniger Padding im Hauptbereich */
+    }
+
+    section {
+        margin: 10px 0; /* Weniger Abstand zwischen den Abschnitten */
+    }
+
+    body {
+        font-size: 14px; /* Kleinere Schriftgröße für mobile Geräte */
+    }
+}
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Für bessere Darstellung auf mobilen Geräten -->
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/styles2.css"> <!-- Dein angepasstes Stylesheet -->
+    <script src="script2.js" defer></script> <!-- Verlinkung zur externen JavaScript-Datei -->
+</head>
+<body>
+    <h2>Gallery</h2>
+
+    <!-- Steuerungsbuttons (Previous, Next, Start/Stop) -->
+    <div class="ctrls">
+        <button>prev</button>
+        <button>next</button>
+        <button>START</button>
+    </div>
+
+    <!-- Thumbnail Container -->
+    <div class="thumb-wrap">
+        <div class="thumb"></div> <!-- Hier werden die Thumbnails dynamisch hinzugefügt -->
+    </div>
+
+    <!-- Großes Bild Container -->
+    <div class="big">
+        <!-- Hier wird das große Bild angezeigt -->
+    </div>
+
+    <!-- Bildbeschreibung -->
+    <div id="image-description"></div> 
+
+    <!-- Footer und Cookie-Notification -->
+    <footer>
+        <h3>Meine Kleine bilder Gallery</h3>
+        <div id="cookieOk">
+            <div>Wir verwenden Cookies. Ist das ok?</div>
+            <button>ja</button>
+            <button>nein</button>
+        </div>
+    </footer>
+</body>
+</html>

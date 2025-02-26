@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('../bilder/brühlscheterrasse.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: rgba(68, 68, 68, 0.8);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+    width: 180px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 100%;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    padding: 10px;
+}
+
+nav ul li ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.container {
+    flex-grow: 1;
+    padding: 20px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dresden-wappen {
+    width: 100px;
+    height: auto;
+    margin: 10px 0;
+}
+
+iframe {
+    width: 600px;
+    height: 450px;
+}
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.info {
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+/* Form-Stile */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px; /* Abstand für Labels */
+}
+
+input, textarea, button {
+    padding: 10px; /* Innenabstand für Eingabefelder */
+    margin-bottom: 15px; /* Abstand unten */
+    border: 1px solid #ccc; /* Rahmenfarbe */
+    border-radius: 5px; /* Abgerundete Ecken */
+}
+
+button {
+    background-color: #4CAF50; /* Hintergrundfarbe für Buttons */
+    color: white; /* Schriftfarbe für Buttons */
+    border: none; /* Kein Rahmen */
+    cursor: pointer; /* Zeiger-Cursor für Buttons */
+}
+
+button:hover {
+    background-color: #45a049; /* Dunklere Farbe beim Hover */
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Footer-Stile */
+footer {
+    background-color: rgba(68, 68, 68, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+}
+
+/* Responsive Tabellenstile */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    iframe {
+        width: 300px;
+        height: 225px;
+    }
+}
