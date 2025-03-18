@@ -3,86 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio - Frank Engelhardt</title>
-    <meta name="description" content="Portfolio von Frank Engelhardt, Webentwickler in Ausbildung.">
-    <meta name="keywords" content="Webentwickler, Programmierer, Portfolio, Frank Engelhardt">
-    <link rel="stylesheet" href="styles.css"> <!-- Verlinkung zur CSS-Datei -->
+    <title>Frank Engelhardt - Webentwickler Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Frank Engelhardt</h1>
-        <p>Webentwickler | Programmierer |</p>
         <nav>
             <ul>
-                <li><a href="#about">Über mich</a></li>
-                <li><a href="#skills">Fähigkeiten</a></li>
-                <li><a href="#projects">Projekte</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#impressum">Impressum</a></li>
-                <li><a href="#datenschutz">Datenschutz</a></li>
+                <li><a href="#ueber-mich">Über mich</a></li>
+                <li><a href="#faehigkeiten">Fähigkeiten</a></li>
+                <li><a href="#projekte">Projekte</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="about">
-            <h2>Über mich</h2>
-            <img src="./images/Ich.jpg" alt="Mein Bild" class="profile-image"> <!-- Bild hinzufügen -->
-            <p>Ich bin ein angehender Webentwickler mit einer Leidenschaft für das Programmieren. Ich habe Grundkenntnisse in verschiedenen Programmiersprachen und bin bestrebt, meine Fähigkeiten weiterzuentwickeln.</p>
+        <section id="ueber-mich">
+            <h1>Über mich</h1>
+            <img src="./images/Ich.jpg" alt="Frank Engelhardt - Webentwickler" class="profile-image">
+            <p>Ich bin Frank Engelhardt, ein leidenschaftlicher angehender Webentwickler. Meine Begeisterung für das Programmieren treibt mich an, kontinuierlich meine Fähigkeiten zu erweitern und innovative Lösungen zu entwickeln. Mit einer soliden Grundlage in verschiedenen Programmiersprachen strebe ich danach, benutzerfreundliche und effiziente Webanwendungen zu erstellen.</p>
         </section>
 
-        <section id="skills">
+        <section id="faehigkeiten">
             <h2>Fähigkeiten</h2>
             <ul>
-                <li>HTML: Grundkenntnisse</li>
-                <li>CSS: Grundkenntnisse</li>
-                <li>JavaScript: Grundkenntnisse</li>
-                <li>Python: Grundkenntnisse</li>
-                <li>jQuery: Grundkenntnisse</li>
+                <li><strong>HTML:</strong> Fortgeschrittene Kenntnisse in der Strukturierung von Webseiten</li>
+                <li><strong>CSS:</strong> Erfahrung in der Gestaltung responsiver Layouts</li>
+                <li><strong>JavaScript:</strong> Grundlegende Kenntnisse in der Implementierung interaktiver Elemente</li>
+                <li><strong>Python:</strong> Basis-Kenntnisse für Backend-Entwicklung</li>
+                <li><strong>jQuery:</strong> Grundlegende Fähigkeiten zur Vereinfachung von DOM-Manipulationen</li>
             </ul>
         </section>
 
-        <section id="projects">
-            <h2>Projekte</h2>
-            <ul>
-                <li><a href="./projekte/Projekt_Dresden/index.html" target="_blank">Projekt 1 - Dresden</a> - Interaktives Dreden.</li>
-                <li><a href="./projekte/Pizza_Service/index.html" target="_blank">Projekt 2 - Pizza Service</a> - Kleiner pizza lifer Service.</li>
-                <li><a href="./projekte/Bibliothek/index.html" target="_blank">Projekt 3 - Bibliothek</a> - Kleine Bücherverwaltung.</li>
-                <li><a href="./projekte/Bildergalerie/index.html" target="_blank">Projekt 4 - Bildergalerie</a> - Kleine Bildergalerie.</li>
-            </ul>
+        <section id="bodyprojekte">
+		<section id="projekte">
+    <h2>Projekte</h2>
+    <div class="project-gallery">
+        <div class="project-item">
+            <img src="./images/dresden-preview.jpg" alt="Dresden Stadtführer" class="project-image">
+            <h3>Dresden - Stadtführer Webseite</h3>
+            <p>Frontend-Entwicklung einer interaktiven Stadtführer-Webseite.</p>
+            <a href="./projekte/Projekt Dresden/html/index.html" target="_blank" rel="noopener noreferrer">Zur Webseite</a>
+        </div>
+        <div class="project-item">
+            <img src="./images/pizza-preview.jpg" alt="Pizza Service" class="project-image">
+            <h3>Pizza Service - Frontend</h3>
+            <p>Frontend-Entwicklung eines responsiven Bestellsystems.</p>
+            <a href="./projekte/Pizza_Service/index.html" target="_blank" rel="noopener noreferrer">Zur Webseite</a>
+        </div>
+        <div class="project-item">
+            <img src="./images/bildergalerie-preview.jpg" alt="Bildergalerie" class="project-image">
+            <h3>Interaktive Bildergalerie</h3>
+            <p>Frontend-Entwicklung einer responsiven Bildergalerie.</p>
+            <a href="./projekte/Bildergalery/index.html" target="_blank" rel="noopener noreferrer">Zur Webseite</a>
+        </div>
+        <div class="project-item">
+            <img src="./images/buecherverwaltung-preview.jpg" alt="Bücherverwaltung" class="project-image">
+            <h3>Bücherverwaltung</h3>
+            <p>Frontend einer Anwendung zur Verwaltung von Büchern.</p>
+            <a href="./projekte/Bibliothek/index.html" target="_blank" rel="noopener noreferrer">Zur Webseite</a>
+        </div>
+		<div class="project-item">
+            <img src="./images/Guess the Word Game-preview.jpg" alt="Guess the Word Game" class="project-image">
+            <h3>Guess the Word Game</h3>
+            <p>Ein kleines Guess the Word Game.</p>
+            <a href="./projekte/Guess the Word Game/index.html" target="_blank" rel="noopener noreferrer">Zur Webseite</a>
+        </div>
+    </div>
+</section>
+
         </section>
 
-        <section id="contact">
+        <section id="kontakt">
             <h2>Kontakt</h2>
-            <p>Du kannst mich erreichen unter: <a href="mailto:deine.email@example.com">deine.email@example.com</a></p>
-            <p>Oder folge mir auf:</p>
-            <ul>
-                <li><a href="https://linkedin.com/in/deinprofil" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/deinprofil" target="_blank">GitHub</a></li>
-            </ul>
-        </section>
+            <p>Ich freue mich darauf, von Ihnen zu hören! Ob Sie Fragen zu meinen Projekten haben oder an einer Zusammenarbeit interessiert sind, zögern Sie nicht, mich zu kontaktieren.</p>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-        <section id="impressum">
-            <h2>Impressum</h2>
-            <p>Name: Frank Engelhardt</p>
-            <p>Adresse: Musterstraße 1, 12345 Musterstadt</p>
-            <p>Telefon: 01234 56789</p>
-            <p>E-Mail: <a href="mailto:deine.email@example.com">deine.email@example.com</a></p>
-        </section>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
 
-        <section id="datenschutz">
-            <h2>Datenschutzerklärung</h2>
-            <p>Wir nehmen den Schutz Ihrer persönlichen Daten ernst. In dieser Datenschutzerklärung informieren wir Sie über die Erhebung und Verwendung Ihrer Daten.</p>
-            <p>Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten können Sie sich jederzeit an uns wenden.</p>
-            <!-- Weitere Informationen über die Datenverarbeitung -->
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Nachricht senden</button>
+            </form>
+            <div class="social-links">
+                <a href="https://github.com/frankengel" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/frankengel" target="_blank">LinkedIn</a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Frank Engelhardt. Alle Rechte vorbehalten.</p>
+        <p>© <span id="currentYear"></span> Frank Engelhardt. Alle Rechte vorbehalten.</p>
     </footer>
-
-    <script src="script.js"></script> <!-- Optional: Verlinkung zu einer JavaScript-Datei -->
+	<script src="script.js"></script>
 </body>
 </html>
+
 

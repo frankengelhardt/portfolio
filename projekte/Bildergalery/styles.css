@@ -1,0 +1,221 @@
+/* Grundlegende Seitenstruktur */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dunkelmodus */
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+/* Header-Styling */
+header {
+    background-color: #aba055;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Hauptinhalt-Styling */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Steuerelemente-Bereich */
+.controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/* Button und Label-Styling */
+button, input[type="file"] + label {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #5f5f5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover, input[type="file"] + label:hover {
+    background-color: #9fa39f;
+}
+
+/* Verstecken des File-Input */
+input[type="file"] {
+    display: none;
+}
+
+/* Dunkelmodus-Switch Styling */
+.dark-mode-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#darkModeToggle {
+    display: none;
+}
+
+#darkModeToggle + label {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#darkModeToggle + label:before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+#darkModeToggle:checked + label {
+    background-color: #ababab;
+}
+
+#darkModeToggle:checked + label:before {
+    transform: translateX(26px);
+}
+
+.dark-mode-label {
+    cursor: pointer;
+}
+
+/* Galerie-Styling */
+.gallery {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Großes Bild Styling */
+.big {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 3px solid #1828e7;
+    border-radius: 10px;
+    background: #b7b7b7d1;
+}
+
+.big img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s, transform 0.3s;
+    position: absolute;
+}
+
+.big img.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+/* Bildbeschreibung Styling */
+#image-description {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Thumbnail-Bereich Styling */
+.thumb {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thumb img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.thumb img.active {
+    border-color: #e50f0f;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Footer-Styling */
+footer {
+    background-color: #aba055;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .big {
+        height: 300px;
+    }
+
+    .thumb img {
+        width: 80px;
+        height: 80px;
+    }
+
+    button, input[type="file"] + label {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .big {
+        height: 200px;
+    }
+
+    .thumb img {
+        width: 60px;
+        height: 60px;
+    }
+
+    button, input[type="file"] + label {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
