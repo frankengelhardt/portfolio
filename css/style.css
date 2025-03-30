@@ -1,0 +1,742 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*---------------------- General Styles --------------------*/
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  text-align: center;
+  background-color: #fdfdfd;
+  color: #5e7184;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  max-width: 425px;
+  width: 85%;
+  margin: 20px 0;
+}
+
+a {
+  color:#f0f2f4;
+  text-decoration: none;
+}
+
+h1, h2, h3, strong {
+  color:#2c3e50;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3em;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+img {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 20px 0;
+  background: #2c3e50;
+}
+
+/*---------------------- Mobile Styles --------------------*/
+
+/* Header styles */
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  background-color: #6e8296;
+}
+
+header .content-wrapper {
+  margin: 0;
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul li {
+  font-size: .875em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Intro Section */
+
+#intro {
+  display: flex;
+  justify-content: center;
+  background-color: #6e8296;
+}
+
+#intro h1 {
+  color:#f0f2f4;
+}
+
+#intro p {
+  color:#f0f2f4;
+  font-size: 1.5em;
+}
+
+/* About Section */
+
+#about {
+  display: flex;
+  justify-content: center;
+}
+
+#about img {
+  border-radius: 50px;
+}
+
+.about-description p {
+  text-align: left;
+}
+
+/* Skills Section */
+
+#skills {
+  display: flex;
+  justify-content: center;
+  background-color: #f7f8f8;
+}
+
+
+#skills i {
+  color: #2c3e50;
+  font-size: 4em;
+}
+
+#skills .skills-items-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+#skills .skills-item {
+  width: 100%;
+  margin: 25px 0;
+}
+
+#skills .skills-item p {
+  margin: 0;
+}
+
+#skills .tech-stack {
+  padding: 30px 25px;
+  color: #2c3e50;
+}
+
+/* Projects Section */
+
+#projects {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-project {
+  padding: 20px 20px 50px 20px;
+  margin: 50px 0;
+  border:#6e8296 solid 3px;
+  border-radius: 30px;
+  filter: drop-shadow(10px 5px 5px #99a7b5);
+  background-color: #f7f8f8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolio-project figure {
+  width: 90%;
+}
+
+.portfolio-project img {
+  border-radius: 5px;
+  filter: drop-shadow(3px 3px 10px #99a7b5);
+}
+
+.project-link {
+  background-color: #2c3e50;
+  color:#f7f8f8;
+  font-size: 1.25em;
+  font-weight: 700;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.project-description p {
+  text-align: left;
+  padding: 0 7px 0 10px;
+}
+
+
+/* Footer styles */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #6e8296;
+}
+
+footer .section-divider {
+  background: #f0f2f4;
+}
+
+footer h2 {
+  color: #f0f2f4;
+}
+
+footer i {
+  font-size: 3em;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.copyright {
+  font-size: .75em;
+  color:#f0f2f4;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.copyright a {
+  color:#f0f2f4;
+}
+
+/*-------- Legal Notice Page ---------*/
+
+#legal-notice {
+  display: flex;
+  justify-content: center;
+}
+
+#legal-notice .content-wrapper {
+  text-align: left;
+}
+
+#legal-notice h1 {
+  font-size: 1.8em;
+}
+
+#legal-notice h2 {
+  font-size: 1.5em;
+}
+
+#legal-notice h3 {
+  font-size: 1.3em;
+}
+
+#legal-notice h4 {
+  font-size: 1.1em;
+}
+
+#legal-notice p {
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+#legal-notice a {
+  color:#75889b;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;  
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Tablet Styles */
+
+  /* General Styles */
+
+  .content-wrapper {
+    max-width: 640px;
+  }
+
+  /* Header Styles */
+
+  header {
+    padding: 30px 0;
+  }
+
+  header .content-wrapper {
+    width: 85%;
+  }
+
+  header nav ul li {
+    font-size: 1em;
+  }
+
+  /* Intro Styles */
+
+  #intro .content-wrapper {
+    margin: 50px;
+  }
+  
+  #intro p {
+    padding: 25px 0;
+    font-size: 1.75em;
+  }
+
+  /* Skills Styles */
+
+  #skills .skills-item {
+    width: 47%;
+  }
+
+  /* Projects Styles */
+
+  #projects .portfolio-projects-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  
+  .portfolio-project {
+    margin: 50px 15px;
+    width: 38%;
+  }
+
+  /* Footer Styles */
+
+  footer i {
+    font-size: 3.5em;
+  }
+  
+  footer ul {
+    margin: 75px 0;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  /* General Styles */
+
+  .content-wrapper {
+    max-width: 850px;
+  }
+
+  /* Header Styles */
+
+  header nav ul {
+    justify-content: space-evenly;
+  }
+
+  header a:hover {
+    color:#2c3e50;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  
+
+  /* Skills Styles */
+
+  #skills .content-wrapper {
+    margin: 50px 0;
+  }
+
+  #skills .skills-item {
+    width: 33%;
+  }
+
+  /* Projects Styles */
+
+  .portfolio-project img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: drop-shadow(3px 3px 10px #2c3e50);
+  }
+
+  .project-link:hover {
+    background-color: #f7f8f8;
+    color:#2c3e50;
+    border: #2c3e50 solid 2px;
+    cursor: pointer;
+    padding: 18px;
+  }
+
+  /* Footer Styles */
+
+  footer .content-wrapper i:hover {
+    color:#2c3e50;
+    cursor: pointer;
+  }
+
+  .copyright a:hover {
+    color:#2c3e50;
+    cursor: pointer;
+  }
+
+  /*Legal Notice & Privacy Policy Styles*/
+
+  #legal-notice a:hover {
+    color:#2c3e50;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+  /* Desktop styles here */
+
+  /* General styles */
+
+  .content-wrapper {
+    max-width: 1450px;
+  }
+
+  header nav ul li {
+    font-size: 1.1em;
+  }
+
+  /* About Styles */
+
+  #about .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .about-picture {
+    width: 40%;
+  }
+
+  .about-description {
+    width: 45%;
+  }
+
+  #about .section-divider {
+    display: none;
+  }
+
+  /* Skills Styles */
+
+  #skills .skills-item {
+    width: 16%;
+  }
+
+  /* Projects Styles */
+
+  .portfolio-project {
+    width: 25%;
+  }
+
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
