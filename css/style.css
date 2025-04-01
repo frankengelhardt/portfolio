@@ -590,7 +590,7 @@ footer ul {
 
   .project-link:hover {
     background-color: #f7f8f8;
-    color:#ffffff;
+    color:#000000;
     border: #2c3e50 solid 2px;
     cursor: pointer;
     padding: 18px;
