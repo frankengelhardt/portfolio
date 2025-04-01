@@ -185,7 +185,7 @@ header {
   display: flex;
   justify-content: center;
   padding: 15px 0;
-  background-color: #6e8296;
+  background-color: #92afcd;
 }
 
 header .content-wrapper {
@@ -209,7 +209,7 @@ header nav ul li {
 #intro {
   display: flex;
   justify-content: center;
-  background-color: #6e8296;
+  background-color: #92afcd;
 }
 
 #intro h1 {
@@ -323,7 +323,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #6e8296;
+  background-color: #92afcd;
 }
 
 footer .section-divider {
